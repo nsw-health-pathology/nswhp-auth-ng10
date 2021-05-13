@@ -5,7 +5,6 @@ import { NswhpAuthService } from '../nswhpauth.service';
 import { AadService } from './aad.service';
 import { IaDfpService } from './iadfp.service';
 import { StorageService } from './storage.service';
-import * as i0 from "@angular/core";
 export declare class AuthenticationInterceptorService implements HttpInterceptor {
     private aadService;
     private storageService;
@@ -37,10 +36,7 @@ export declare class AuthenticationInterceptorService implements HttpInterceptor
     private logStepUpResponse;
     private handleContactAdmin;
     private handleRegistration;
-    static ɵfac: i0.ɵɵFactoryDef<AuthenticationInterceptorService, never>;
-    static ɵprov: i0.ɵɵInjectableDef<AuthenticationInterceptorService>;
 }
 export interface HttpAuthRequest {
     [index: string]: string;
 }
-//# sourceMappingURL=AuthenticationInterceptor.service.d.ts.map

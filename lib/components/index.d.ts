@@ -6,4 +6,3 @@ export * from './push/push.component';
 export * from './register/register.component';
 export * from './spinner/spinner.component';
 export * from './tick/tick.component';
-//# sourceMappingURL=index.d.ts.map

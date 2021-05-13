@@ -5,7 +5,6 @@ import { IMfaMessage } from '../model/mfaMessage';
 import { NswhpAuthService } from '../nswhpauth.service';
 import { IaDfpService } from './iadfp.service';
 import { StorageService } from './storage.service';
-import * as i0 from "@angular/core";
 export declare class VipService {
     private http;
     private router;
@@ -30,7 +29,4 @@ export declare class VipService {
      */
     private handleError;
     private handleContactAdmin;
-    static ɵfac: i0.ɵɵFactoryDef<VipService, never>;
-    static ɵprov: i0.ɵɵInjectableDef<VipService>;
 }
-//# sourceMappingURL=vip.service.d.ts.map

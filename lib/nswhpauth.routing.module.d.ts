@@ -1,7 +1,4 @@
-import * as i0 from "@angular/core";
-import * as i1 from "@angular/router";
+import { RouterModule } from '@angular/router';
+export declare const routerModuleForRoot: import("@angular/core").ModuleWithProviders<RouterModule>;
 export declare class NswhpAuthRoutingModule {
-    static ɵmod: i0.ɵɵNgModuleDefWithMeta<NswhpAuthRoutingModule, never, [typeof i1.RouterModule], [typeof i1.RouterModule]>;
-    static ɵinj: i0.ɵɵInjectorDef<NswhpAuthRoutingModule>;
 }
-//# sourceMappingURL=nswhpauth.routing.module.d.ts.map

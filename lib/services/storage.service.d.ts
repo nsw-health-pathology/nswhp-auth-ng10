@@ -1,4 +1,3 @@
-import * as i0 from "@angular/core";
 export declare class StorageService {
     private TRANSACTION_ID;
     private VIP_TOKEN;
@@ -18,7 +17,4 @@ export declare class StorageService {
     retrieveAzureInstance(): number;
     retrieveAzureTenantId(): string;
     clearAzureInstance(): void;
-    static ɵfac: i0.ɵɵFactoryDef<StorageService, never>;
-    static ɵprov: i0.ɵɵInjectableDef<StorageService>;
 }
-//# sourceMappingURL=storage.service.d.ts.map

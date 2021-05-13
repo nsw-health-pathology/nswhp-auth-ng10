@@ -1,8 +1,8 @@
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/common/http'), require('@angular/material/button'), require('@angular/material/card'), require('@angular/material/chips'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/radio'), require('adal-angular4'), require('jwt-decode'), require('@angular/router'), require('rxjs'), require('rxjs/operators'), require('http-status-codes')) :
-    typeof define === 'function' && define.amd ? define('nswhp-auth-ng10', ['exports', '@angular/core', '@angular/common', '@angular/common/http', '@angular/material/button', '@angular/material/card', '@angular/material/chips', '@angular/material/form-field', '@angular/material/icon', '@angular/material/input', '@angular/material/radio', 'adal-angular4', 'jwt-decode', '@angular/router', 'rxjs', 'rxjs/operators', 'http-status-codes'], factory) :
-    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['nswhp-auth-ng10'] = {}, global.ng.core, global.ng.common, global.ng.common.http, global.ng.material.button, global.ng.material.card, global.ng.material.chips, global.ng.material.formField, global.ng.material.icon, global.ng.material.input, global.ng.material.radio, global['adal-angular4'], global.jwt_decode, global.ng.router, global.rxjs, global.rxjs.operators, global['http-status-codes']));
-}(this, (function (exports, i0, i3$1, i1$2, i5, card, i8, i3, icon, i4, radio, i1, jwtDecode_, i1$1, rxjs, operators, HttpStatus) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@angular/core'), require('@angular/common'), require('@angular/common/http'), require('@angular/material/button'), require('@angular/material/card'), require('@angular/material/chips'), require('@angular/material/form-field'), require('@angular/material/icon'), require('@angular/material/input'), require('@angular/material/radio'), require('@angular/router'), require('adal-angular4'), require('jwt-decode'), require('adal-angular4/index'), require('rxjs'), require('rxjs/operators'), require('http-status-codes')) :
+    typeof define === 'function' && define.amd ? define('nswhp-auth-ng10', ['exports', '@angular/core', '@angular/common', '@angular/common/http', '@angular/material/button', '@angular/material/card', '@angular/material/chips', '@angular/material/form-field', '@angular/material/icon', '@angular/material/input', '@angular/material/radio', '@angular/router', 'adal-angular4', 'jwt-decode', 'adal-angular4/index', 'rxjs', 'rxjs/operators', 'http-status-codes'], factory) :
+    (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global['nswhp-auth-ng10'] = {}, global.ng.core, global.ng.common, global.ng.common.http, global.ng.material.button, global.ng.material.card, global.ng.material.chips, global.ng.material.formField, global.ng.material.icon, global.ng.material.input, global.ng.material.radio, global.ng.router, global['adal-angular4'], global.jwt_decode, global.i1, global.rxjs, global.rxjs.operators, global['http-status-codes']));
+}(this, (function (exports, i0, common, i4, button, card, chips, formField, icon, input, radio, i3, adalAngular4, jwtDecode_, i1, rxjs, operators, HttpStatus) { 'use strict';
 
     function _interopNamespace(e) {
         if (e && e.__esModule) { return e; } else {
@@ -35,29 +35,23 @@
         }
         return NswhpAuthService;
     }());
-    NswhpAuthService.ɵfac = function NswhpAuthService_Factory(t) { return new (t || NswhpAuthService)(i0.ɵɵinject(NSWHP_AUTH_CONFIG)); };
-    NswhpAuthService.ɵprov = i0.ɵɵdefineInjectable({ token: NswhpAuthService, factory: NswhpAuthService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NswhpAuthService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () {
-            return [{ type: undefined, decorators: [{
-                            type: i0.Inject,
-                            args: [NSWHP_AUTH_CONFIG]
-                        }] }];
-        }, null);
-    })();
+    NswhpAuthService.ɵprov = i0.ɵɵdefineInjectable({ factory: function NswhpAuthService_Factory() { return new NswhpAuthService(i0.ɵɵinject(NSWHP_AUTH_CONFIG)); }, token: NswhpAuthService, providedIn: "root" });
+    NswhpAuthService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    NswhpAuthService.ctorParameters = function () { return [
+        { type: undefined, decorators: [{ type: i0.Inject, args: [NSWHP_AUTH_CONFIG,] }] }
+    ]; };
 
     var modules = [
-        i5.MatButtonModule,
+        button.MatButtonModule,
         card.MatCardModule,
-        i8.MatChipsModule,
-        i3.MatFormFieldModule,
+        chips.MatChipsModule,
+        formField.MatFormFieldModule,
         icon.MatIconModule,
-        i4.MatInputModule,
+        input.MatInputModule,
         radio.MatRadioModule,
     ];
     var NswhpAuthMaterialModule = /** @class */ (function () {
@@ -65,44 +59,16 @@
         }
         return NswhpAuthMaterialModule;
     }());
-    NswhpAuthMaterialModule.ɵmod = i0.ɵɵdefineNgModule({ type: NswhpAuthMaterialModule });
-    NswhpAuthMaterialModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NswhpAuthMaterialModule_Factory(t) { return new (t || NswhpAuthMaterialModule)(); }, imports: [[
-                modules
-            ], i5.MatButtonModule,
-            card.MatCardModule,
-            i8.MatChipsModule,
-            i3.MatFormFieldModule,
-            icon.MatIconModule,
-            i4.MatInputModule,
-            radio.MatRadioModule] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NswhpAuthMaterialModule, { imports: [i5.MatButtonModule,
-                card.MatCardModule,
-                i8.MatChipsModule,
-                i3.MatFormFieldModule,
-                icon.MatIconModule,
-                i4.MatInputModule,
-                radio.MatRadioModule], exports: [i5.MatButtonModule,
-                card.MatCardModule,
-                i8.MatChipsModule,
-                i3.MatFormFieldModule,
-                icon.MatIconModule,
-                i4.MatInputModule,
-                radio.MatRadioModule] });
-    })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NswhpAuthMaterialModule, [{
-                type: i0.NgModule,
-                args: [{
-                        imports: [
-                            modules
-                        ],
-                        exports: [
-                            modules
-                        ]
-                    }]
-            }], null, null);
-    })();
+    NswhpAuthMaterialModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    imports: [
+                        modules
+                    ],
+                    exports: [
+                        modules
+                    ]
+                },] }
+    ];
 
     /*! *****************************************************************************
     Copyright (c) Microsoft Corporation.
@@ -484,13 +450,10 @@
         };
         return StorageService;
     }());
-    StorageService.ɵfac = function StorageService_Factory(t) { return new (t || StorageService)(); };
-    StorageService.ɵprov = i0.ɵɵdefineInjectable({ token: StorageService, factory: StorageService.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(StorageService, [{
-                type: i0.Injectable
-            }], function () { return []; }, null);
-    })();
+    StorageService.decorators = [
+        { type: i0.Injectable }
+    ];
+    StorageService.ctorParameters = function () { return []; };
 
     var AadService = /** @class */ (function () {
         function AadService(adalService, storage, nswhpAuthService) {
@@ -557,16 +520,17 @@
     }());
     AadService.AZURE_AD_INSTANCE = 0;
     AadService.AZURE_B2C_INSTANCE = 1; // Not used because the app only supports Health AD Logins.
-    AadService.ɵfac = function AadService_Factory(t) { return new (t || AadService)(i0.ɵɵinject(i1.AdalService), i0.ɵɵinject(StorageService), i0.ɵɵinject(NswhpAuthService)); };
-    AadService.ɵprov = i0.ɵɵdefineInjectable({ token: AadService, factory: AadService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(AadService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () { return [{ type: i1.AdalService }, { type: StorageService }, { type: NswhpAuthService }]; }, null);
-    })();
+    AadService.ɵprov = i0.ɵɵdefineInjectable({ factory: function AadService_Factory() { return new AadService(i0.ɵɵinject(i1.AdalService), i0.ɵɵinject(StorageService), i0.ɵɵinject(NswhpAuthService)); }, token: AadService, providedIn: "root" });
+    AadService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    AadService.ctorParameters = function () { return [
+        { type: adalAngular4.AdalService },
+        { type: StorageService },
+        { type: NswhpAuthService }
+    ]; };
 
     var AzureLoginComponent = /** @class */ (function () {
         function AzureLoginComponent(aadService, router, activatedRoute, storage) {
@@ -639,31 +603,19 @@
         };
         return AzureLoginComponent;
     }());
-    AzureLoginComponent.ɵfac = function AzureLoginComponent_Factory(t) { return new (t || AzureLoginComponent)(i0.ɵɵdirectiveInject(AadService), i0.ɵɵdirectiveInject(i1$1.Router), i0.ɵɵdirectiveInject(i1$1.ActivatedRoute), i0.ɵɵdirectiveInject(StorageService)); };
-    AzureLoginComponent.ɵcmp = i0.ɵɵdefineComponent({ type: AzureLoginComponent, selectors: [["lib-azure-login"]], decls: 3, vars: 1, consts: [[1, "mat-elevation-z2", "form-container"], ["color", "accent", "mat-raised-button", "", 1, "big", 3, "click"]], template: function AzureLoginComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0.ɵɵelementStart(0, "section", 0);
-                i0.ɵɵelementStart(1, "button", 1);
-                i0.ɵɵlistener("click", function AzureLoginComponent_Template_button_click_1_listener() { return ctx.selectAzureInstance(ctx.azureInstanceAD); });
-                i0.ɵɵtext(2);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0.ɵɵadvance(2);
-                i0.ɵɵtextInterpolate1(" ", ctx.azureInstanceAD, " ");
-            }
-        }, directives: [i5.MatButton], styles: [".big[_ngcontent-%COMP%]{font-size:20px;margin:50px}", ".form-container[_ngcontent-%COMP%]{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(AzureLoginComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-azure-login',
-                        templateUrl: './azure-login.component.html',
-                        styleUrls: ['./azure-login.component.css', '../../main.css']
-                    }]
-            }], function () { return [{ type: AadService }, { type: i1$1.Router }, { type: i1$1.ActivatedRoute }, { type: StorageService }]; }, null);
-    })();
+    AzureLoginComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-azure-login',
+                    template: "<section class=\"mat-elevation-z2 form-container\">\r\n  <button color=\"accent\" mat-raised-button class=\"big\" (click)=\"selectAzureInstance(azureInstanceAD)\">\r\n    {{azureInstanceAD}}\r\n  </button>\r\n</section>\r\n",
+                    styles: [".big{font-size:20px;margin:50px}", ".form-container{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"]
+                },] }
+    ];
+    AzureLoginComponent.ctorParameters = function () { return [
+        { type: AadService },
+        { type: i3.Router },
+        { type: i3.ActivatedRoute },
+        { type: StorageService }
+    ]; };
 
     var AzureLogoutComponent = /** @class */ (function () {
         function AzureLogoutComponent(aadService) {
@@ -674,17 +626,15 @@
         };
         return AzureLogoutComponent;
     }());
-    AzureLogoutComponent.ɵfac = function AzureLogoutComponent_Factory(t) { return new (t || AzureLogoutComponent)(i0.ɵɵdirectiveInject(AadService)); };
-    AzureLogoutComponent.ɵcmp = i0.ɵɵdefineComponent({ type: AzureLogoutComponent, selectors: [["lib-azure-logout"]], decls: 0, vars: 0, template: function AzureLogoutComponent_Template(rf, ctx) { }, encapsulation: 2 });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(AzureLogoutComponent, [{
-                type: i0.Component,
-                args: [{
-                        template: '',
-                        selector: 'lib-azure-logout'
-                    }]
-            }], function () { return [{ type: AadService }]; }, null);
-    })();
+    AzureLogoutComponent.decorators = [
+        { type: i0.Component, args: [{
+                    template: '',
+                    selector: 'lib-azure-logout'
+                },] }
+    ];
+    AzureLogoutComponent.ctorParameters = function () { return [
+        { type: AadService }
+    ]; };
 
     var ContactAdminComponent = /** @class */ (function () {
         function ContactAdminComponent(router) {
@@ -707,50 +657,16 @@
         };
         return ContactAdminComponent;
     }());
-    ContactAdminComponent.ɵfac = function ContactAdminComponent_Factory(t) { return new (t || ContactAdminComponent)(i0.ɵɵdirectiveInject(i1$1.Router)); };
-    ContactAdminComponent.ɵcmp = i0.ɵɵdefineComponent({ type: ContactAdminComponent, selectors: [["lib-contact-admin"]], decls: 14, vars: 2, consts: [[1, "container", "h-50"], [1, "row", "align-items-center", "h-100"], [1, "col-10", "mx-auto"], [1, "jumbotron"], [1, "display-4"], [1, "my-4"], [1, "lead"], ["rel", "noopener noreferrer", 3, "href"], ["mat-raised-button", "", "color", "primary", 3, "click"]], template: function ContactAdminComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelementStart(1, "div", 1);
-                i0.ɵɵelementStart(2, "div", 2);
-                i0.ɵɵelementStart(3, "div", 3);
-                i0.ɵɵelementStart(4, "h1", 4);
-                i0.ɵɵtext(5, "Access Denied");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelement(6, "hr", 5);
-                i0.ɵɵelementStart(7, "p", 6);
-                i0.ɵɵtext(8, " Unfortunately, If you have reached this page after logging in, it means you do not have the required permissions to proceed. Please contact us at (");
-                i0.ɵɵelementStart(9, "a", 7);
-                i0.ɵɵtext(10);
-                i0.ɵɵelementEnd();
-                i0.ɵɵtext(11, ") to request access. We apologize for any inconvenience. ");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(12, "button", 8);
-                i0.ɵɵlistener("click", function ContactAdminComponent_Template_button_click_12_listener() { return ctx.redirect(); });
-                i0.ɵɵtext(13, "Return to login");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0.ɵɵadvance(9);
-                i0.ɵɵpropertyInterpolate("href", ctx.href, i0.ɵɵsanitizeUrl);
-                i0.ɵɵadvance(1);
-                i0.ɵɵtextInterpolate(ctx.email);
-            }
-        }, directives: [i5.MatButton], styles: ["", ".form-container[_ngcontent-%COMP%]{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(ContactAdminComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-contact-admin',
-                        templateUrl: './contact-admin.component.html',
-                        styleUrls: ['./contact-admin.component.scss', '../../main.css']
-                    }]
-            }], function () { return [{ type: i1$1.Router }]; }, null);
-    })();
+    ContactAdminComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-contact-admin',
+                    template: "<div class=\"container h-50\">\r\n  <div class=\"row align-items-center h-100\">\r\n    <div class=\"col-10 mx-auto\">\r\n      <div class=\"jumbotron\">\r\n        <h1 class=\"display-4\">Access Denied</h1>\r\n        <hr class=\"my-4\">\r\n        <p class=\"lead\">\r\n          Unfortunately, If you have reached this page after logging in, it means you do not have the required\r\n          permissions to proceed. Please contact us at (<a rel=\"noopener noreferrer\" href=\"{{href}}\">{{email}}</a>) to\r\n          request access. We apologize for any inconvenience.\r\n        </p>\r\n        <button mat-raised-button color=\"primary\" (click)=\"redirect()\">Return to login</button>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</div>\r\n",
+                    styles: ["", ".form-container{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"]
+                },] }
+    ];
+    ContactAdminComponent.ctorParameters = function () { return [
+        { type: i3.Router }
+    ]; };
 
     var IaDfpService = /** @class */ (function () {
         function IaDfpService() {
@@ -758,13 +674,10 @@
         }
         return IaDfpService;
     }());
-    IaDfpService.ɵfac = function IaDfpService_Factory(t) { return new (t || IaDfpService)(); };
-    IaDfpService.ɵprov = i0.ɵɵdefineInjectable({ token: IaDfpService, factory: IaDfpService.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(IaDfpService, [{
-                type: i0.Injectable
-            }], function () { return []; }, null);
-    })();
+    IaDfpService.decorators = [
+        { type: i0.Injectable }
+    ];
+    IaDfpService.ctorParameters = function () { return []; };
 
     // Semantics Device Fingerprint library
     var VipService = /** @class */ (function () {
@@ -912,102 +825,17 @@
         };
         return VipService;
     }());
-    VipService.ɵfac = function VipService_Factory(t) { return new (t || VipService)(i0.ɵɵinject(i1$2.HttpClient), i0.ɵɵinject(i1$1.Router), i0.ɵɵinject(StorageService), i0.ɵɵinject(IaDfpService), i0.ɵɵinject(NswhpAuthService)); };
-    VipService.ɵprov = i0.ɵɵdefineInjectable({ token: VipService, factory: VipService.ɵfac });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(VipService, [{
-                type: i0.Injectable
-            }], function () { return [{ type: i1$2.HttpClient }, { type: i1$1.Router }, { type: StorageService }, { type: IaDfpService }, { type: NswhpAuthService }]; }, null);
-    })();
+    VipService.decorators = [
+        { type: i0.Injectable }
+    ];
+    VipService.ctorParameters = function () { return [
+        { type: i4.HttpClient },
+        { type: i3.Router },
+        { type: StorageService },
+        { type: IaDfpService },
+        { type: NswhpAuthService }
+    ]; };
 
-    var TickComponent = /** @class */ (function () {
-        function TickComponent() {
-        }
-        TickComponent.prototype.ngOnInit = function () {
-        };
-        return TickComponent;
-    }());
-    TickComponent.ɵfac = function TickComponent_Factory(t) { return new (t || TickComponent)(); };
-    TickComponent.ɵcmp = i0.ɵɵdefineComponent({ type: TickComponent, selectors: [["lib-tick"]], decls: 6, vars: 0, consts: [[1, "checkmark"], ["version", "1.1", "id", "Layer_1", "xmlns", "http://www.w3.org/2000/svg", 0, "xmlns", "xlink", "http://www.w3.org/1999/xlink", "x", "0px", "y", "0px", "viewBox", "0 0 161.2 161.2", "enable-background", "new 0 0 161.2 161.2", 0, "xml", "space", "preserve"], ["fill", "none", "stroke", "#7DB0D5", "stroke-miterlimit", "10", "d", "M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4\n\tc-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5\n\tc0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z", 1, "path"], ["fill", "none", "stroke", "rgba(155, 255, 177, 1)", "stroke-width", "4", "stroke-miterlimit", "10", "cx", "80.6", "cy", "80.6", "r", "62.1", 1, "path"], ["fill", "none", "stroke", "rgba(155, 255, 177, 1)", "stroke-width", "6", "stroke-linecap", "round", "stroke-miterlimit", "10", "points", "113,52.8\n\t74.1,108.4 48.2,86.4 ", 1, "path"], ["fill", "none", "stroke", "rgba(155, 255, 177, 1)", "stroke-width", "4", "stroke-miterlimit", "10", "stroke-dasharray", "12.2175,12.2175", "cx", "80.6", "cy", "80.6", "r", "73.9", 1, "spin"]], template: function TickComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵnamespaceSVG();
-                i0.ɵɵelementStart(1, "svg", 1);
-                i0.ɵɵelement(2, "path", 2);
-                i0.ɵɵelement(3, "circle", 3);
-                i0.ɵɵelement(4, "polyline", 4);
-                i0.ɵɵelement(5, "circle", 5);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-            }
-        }, styles: [".checkmark[_ngcontent-%COMP%]{margin:0 auto;padding-top:40px;width:200px}.path[_ngcontent-%COMP%]{-webkit-animation:dash 2s ease-in-out;animation:dash 2s ease-in-out;stroke-dasharray:1000;stroke-dashoffset:0}.spin[_ngcontent-%COMP%]{-webkit-animation:spin 2s;-webkit-transform-origin:50% 50%;animation:spin 2s;transform-origin:50% 50%}@keyframes dash{0%{stroke-dashoffset:1000}to{stroke-dashoffset:0}}@keyframes spin{0%{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(1turn)}}@keyframes text{0%{opacity:0}to{opacity:1}}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(TickComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-tick',
-                        templateUrl: './tick.component.html',
-                        styleUrls: ['./tick.component.css']
-                    }]
-            }], function () { return []; }, null);
-    })();
-
-    function OtpComponent_div_1_p_5_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p", 10);
-            i0.ɵɵtext(1, "Failed to authenticate OTP, please try again.");
-            i0.ɵɵelementEnd();
-        }
-    }
-    var _c0 = function (a0) { return { "invalid-input": a0 }; };
-    function OtpComponent_div_1_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r5_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "h2");
-            i0.ɵɵtext(2, "Please enter your Security Code below and press Submit");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "h3");
-            i0.ɵɵtext(4, "You can find your Security Code in your VIP Access mobile app or desktop app");
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(5, OtpComponent_div_1_p_5_Template, 2, 0, "p", 2);
-            i0.ɵɵelementStart(6, "form", 3);
-            i0.ɵɵlistener("submit", function OtpComponent_div_1_Template_form_submit_6_listener() { i0.ɵɵrestoreView(_r5_1); var _r3 = i0.ɵɵreference(10); var ctx_r4 = i0.ɵɵnextContext(); return ctx_r4.onSubmit(_r3.value); });
-            i0.ɵɵelementStart(7, "div", 4);
-            i0.ɵɵelementStart(8, "mat-form-field", 5);
-            i0.ɵɵelementStart(9, "input", 6, 7);
-            i0.ɵɵlistener("keypress", function OtpComponent_div_1_Template_input_keypress_9_listener() { i0.ɵɵrestoreView(_r5_1); var ctx_r6 = i0.ɵɵnextContext(); return ctx_r6.enteringOtp(); });
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(11, "div", 8);
-            i0.ɵɵelementStart(12, "button", 9);
-            i0.ɵɵtext(13);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r0 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(5);
-            i0.ɵɵproperty("ngIf", ctx_r0.failed);
-            i0.ɵɵadvance(4);
-            i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(3, _c0, ctx_r0.failed));
-            i0.ɵɵadvance(4);
-            i0.ɵɵtextInterpolate1(" ", ctx_r0.submitButtonText, " ");
-        }
-    }
-    function OtpComponent_div_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "h1");
-            i0.ɵɵtext(2, "Success!");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(3, "lib-tick");
-            i0.ɵɵelementEnd();
-        }
-    }
     var OtpComponent = /** @class */ (function () {
         function OtpComponent(vipService) {
             this.vipService = vipService;
@@ -1045,139 +873,17 @@
         };
         return OtpComponent;
     }());
-    OtpComponent.ɵfac = function OtpComponent_Factory(t) { return new (t || OtpComponent)(i0.ɵɵdirectiveInject(VipService)); };
-    OtpComponent.ɵcmp = i0.ɵɵdefineComponent({ type: OtpComponent, selectors: [["lib-otp"]], decls: 3, vars: 2, consts: [[1, "mat-elevation-z2", "form-container"], [4, "ngIf"], ["class", "invalid-input-message", 4, "ngIf"], [3, "submit"], [1, "container-body"], [1, "search-form-field"], ["matFormFieldControl", "", "matInput", "", "type", "text", "placeholder", "SECURITY CODE", "required", "", 3, "ngClass", "keypress"], ["otpCode", ""], [1, "container-button"], ["mat-button", "", "matSuffix", "", "color", "accent", "mat-raised-button", "", "id", "submit", "type", "submit"], [1, "invalid-input-message"]], template: function OtpComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0.ɵɵelementStart(0, "section", 0);
-                i0.ɵɵtemplate(1, OtpComponent_div_1_Template, 14, 5, "div", 1);
-                i0.ɵɵtemplate(2, OtpComponent_div_2_Template, 4, 0, "div", 1);
-                i0.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", !ctx.authenticated);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.authenticated);
-            }
-        }, directives: [i3$1.NgIf, i3.MatFormField, i4.MatInput, i3$1.NgClass, i5.MatButton, i3.MatSuffix, TickComponent], styles: ["", ".form-container[_ngcontent-%COMP%]{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(OtpComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-otp',
-                        templateUrl: './otp.component.html',
-                        styleUrls: ['./otp.component.scss', '../../main.css']
-                    }]
-            }], function () { return [{ type: VipService }]; }, null);
-    })();
+    OtpComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-otp',
+                    template: "<section class=\"mat-elevation-z2 form-container\">\r\n  <div *ngIf=\"!authenticated\">\r\n    <h2>Please enter your Security Code below and press Submit</h2>\r\n    <h3>You can find your Security Code in your VIP Access mobile app or desktop app</h3>\r\n    <p *ngIf=\"failed\" class=\"invalid-input-message\">Failed to authenticate OTP, please try again.</p>\r\n    <form (submit)=\"onSubmit(otpCode.value)\">\r\n      <div class=\"container-body\">\r\n        <mat-form-field class=\"search-form-field\">\r\n          <input #otpCode matFormFieldControl matInput type=\"text\" placeholder=\"SECURITY CODE\" required\r\n            [ngClass]=\"{ 'invalid-input' : failed }\" (keypress)=\"enteringOtp()\" />\r\n\r\n        </mat-form-field>\r\n\r\n        <div class=\"container-button\">\r\n          <button mat-button matSuffix color=\"accent\" mat-raised-button id=\"submit\" type=\"submit\">\r\n            {{submitButtonText}}\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </form>\r\n  </div>\r\n  <div *ngIf=\"authenticated\">\r\n    <h1>Success!</h1>\r\n    <lib-tick></lib-tick>\r\n  </div>\r\n</section>\r\n",
+                    styles: ["", ".form-container{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"]
+                },] }
+    ];
+    OtpComponent.ctorParameters = function () { return [
+        { type: VipService }
+    ]; };
 
-    var SpinnerComponent = /** @class */ (function () {
-        function SpinnerComponent() {
-            this.isDelayedRunning = false;
-        }
-        Object.defineProperty(SpinnerComponent.prototype, "isRunning", {
-            set: function (value) {
-                this.isDelayedRunning = value;
-            },
-            enumerable: false,
-            configurable: true
-        });
-        return SpinnerComponent;
-    }());
-    SpinnerComponent.ɵfac = function SpinnerComponent_Factory(t) { return new (t || SpinnerComponent)(); };
-    SpinnerComponent.ɵcmp = i0.ɵɵdefineComponent({ type: SpinnerComponent, selectors: [["lib-spinner"]], inputs: { isRunning: "isRunning" }, decls: 3, vars: 1, consts: [[1, "spinner", 3, "hidden"], [1, "double-bounce1"], [1, "double-bounce2"]], template: function SpinnerComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0.ɵɵelementStart(0, "div", 0);
-                i0.ɵɵelement(1, "div", 1);
-                i0.ɵɵelement(2, "div", 2);
-                i0.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0.ɵɵproperty("hidden", !ctx.isDelayedRunning);
-            }
-        }, styles: [".spinner[_ngcontent-%COMP%]{height:250px;margin:50px auto;position:relative;width:250px}.double-bounce1[_ngcontent-%COMP%], .double-bounce2[_ngcontent-%COMP%]{animation:sk-bounce 2s ease-in-out infinite;background-color:rgba(155,255,177,.5);border-radius:50%;height:100%;left:0;opacity:.6;position:absolute;top:0;width:100%}.double-bounce2[_ngcontent-%COMP%]{animation-delay:-1s}@keyframes sk-bounce{0%,to{-webkit-transform:scale(0);transform:scale(0)}50%{-webkit-transform:scale(1);transform:scale(1)}}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(SpinnerComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-spinner',
-                        templateUrl: './spinner.component.html',
-                        styleUrls: ['./spinner.component.css']
-                    }]
-            }], function () { return []; }, { isRunning: [{
-                    type: i0.Input
-                }] });
-    })();
-
-    function PushComponent_div_1_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r3_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "h2");
-            i0.ɵɵtext(2, "A push notification has been sent to your mobile device.");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "h3");
-            i0.ɵɵtext(4, "Waiting for Sign in Request to be approved...");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelement(5, "lib-spinner", 2);
-            i0.ɵɵelementStart(6, "h3");
-            i0.ɵɵtext(7, "Please do not refresh this page");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(8, "button", 3);
-            i0.ɵɵlistener("click", function PushComponent_div_1_Template_button_click_8_listener() { i0.ɵɵrestoreView(_r3_1); var ctx_r2 = i0.ɵɵnextContext(); return ctx_r2.useOTP(); });
-            i0.ɵɵtext(9, "Use OTP Instead");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r0 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(5);
-            i0.ɵɵproperty("isRunning", ctx_r0.waiting);
-        }
-    }
-    function PushComponent_div_2_div_5_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelement(1, "lib-tick");
-            i0.ɵɵelementEnd();
-        }
-    }
-    function PushComponent_div_2_div_6_Template(rf, ctx) {
-        if (rf & 1) {
-            var _r7_1 = i0.ɵɵgetCurrentView();
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "button", 3);
-            i0.ɵɵlistener("click", function PushComponent_div_2_div_6_Template_button_click_1_listener() { i0.ɵɵrestoreView(_r7_1); var ctx_r6 = i0.ɵɵnextContext(2); return ctx_r6.useOTP(); });
-            i0.ɵɵtext(2, "Use OTP Instead");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-    }
-    function PushComponent_div_2_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "h1");
-            i0.ɵɵtext(2);
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "h2");
-            i0.ɵɵtext(4);
-            i0.ɵɵelementEnd();
-            i0.ɵɵtemplate(5, PushComponent_div_2_div_5_Template, 2, 0, "div", 1);
-            i0.ɵɵtemplate(6, PushComponent_div_2_div_6_Template, 3, 0, "div", 1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r1 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(2);
-            i0.ɵɵtextInterpolate(ctx_r1.statusMessage);
-            i0.ɵɵadvance(2);
-            i0.ɵɵtextInterpolate(ctx_r1.detailMessage);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", ctx_r1.success);
-            i0.ɵɵadvance(1);
-            i0.ɵɵproperty("ngIf", !ctx_r1.success);
-        }
-    }
     var PushComponent = /** @class */ (function () {
         function PushComponent(router, vipService) {
             this.router = router;
@@ -1234,70 +940,18 @@
         };
         return PushComponent;
     }());
-    PushComponent.ɵfac = function PushComponent_Factory(t) { return new (t || PushComponent)(i0.ɵɵdirectiveInject(i1$1.Router), i0.ɵɵdirectiveInject(VipService)); };
-    PushComponent.ɵcmp = i0.ɵɵdefineComponent({ type: PushComponent, selectors: [["lib-push"]], decls: 3, vars: 2, consts: [[1, "mat-elevation-z2", "form-container"], [4, "ngIf"], [3, "isRunning"], ["mat-button", "", "mat-raised-button", "", "color", "primary", 3, "click"]], template: function PushComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                i0.ɵɵelementStart(0, "section", 0);
-                i0.ɵɵtemplate(1, PushComponent_div_1_Template, 10, 1, "div", 1);
-                i0.ɵɵtemplate(2, PushComponent_div_2_Template, 7, 4, "div", 1);
-                i0.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.waiting);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", !ctx.waiting);
-            }
-        }, directives: [i3$1.NgIf, SpinnerComponent, i5.MatButton, TickComponent], styles: ["", ".form-container[_ngcontent-%COMP%]{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(PushComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-push',
-                        templateUrl: './push.component.html',
-                        styleUrls: ['./push.component.scss', '../../main.css']
-                    }]
-            }], function () { return [{ type: i1$1.Router }, { type: VipService }]; }, null);
-    })();
+    PushComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-push',
+                    template: "<section class=\"mat-elevation-z2 form-container\">\r\n  <div *ngIf=\"waiting\">\r\n    <h2>A push notification has been sent to your mobile device.</h2>\r\n    <h3>Waiting for Sign in Request to be approved...</h3>\r\n    <lib-spinner [isRunning]=\"waiting\"></lib-spinner>\r\n    <h3>Please do not refresh this page</h3>\r\n    <button mat-button mat-raised-button color=\"primary\" (click)=\"useOTP()\">Use OTP Instead</button>\r\n  </div>\r\n  <div *ngIf=\"!waiting\">\r\n    <h1>{{statusMessage}}</h1>\r\n    <h2>{{detailMessage}}</h2>\r\n    <div *ngIf=\"success\">\r\n      <lib-tick></lib-tick>\r\n    </div>\r\n    <div *ngIf=\"!success\">\r\n      <button mat-button mat-raised-button color=\"primary\" (click)=\"useOTP()\">Use OTP Instead</button>\r\n    </div>\r\n  </div>\r\n</section>\r\n",
+                    styles: ["", ".form-container{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"]
+                },] }
+    ];
+    PushComponent.ctorParameters = function () { return [
+        { type: i3.Router },
+        { type: VipService }
+    ]; };
 
-    function RegisterComponent_h3_1_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "h3");
-            i0.ɵɵtext(1, "Failed Registration.");
-            i0.ɵɵelement(2, "br");
-            i0.ɵɵtext(3, "We have sent you a new SMS code. Please try again.");
-            i0.ɵɵelementEnd();
-        }
-    }
-    function RegisterComponent_div_24_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "div");
-            i0.ɵɵelementStart(1, "p");
-            i0.ɵɵtext(2, "Sending SMS code to your mobile device...");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementStart(3, "mat-chip-list");
-            i0.ɵɵelementStart(4, "mat-chip", 15);
-            i0.ɵɵtext(5, "Waiting for SMS code...");
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-            i0.ɵɵelementEnd();
-        }
-    }
-    function RegisterComponent_p_25_Template(rf, ctx) {
-        if (rf & 1) {
-            i0.ɵɵelementStart(0, "p");
-            i0.ɵɵtext(1);
-            i0.ɵɵelementEnd();
-        }
-        if (rf & 2) {
-            var ctx_r5 = i0.ɵɵnextContext();
-            i0.ɵɵadvance(1);
-            i0.ɵɵtextInterpolate1("SMS Code has been sent to +", ctx_r5.mobileNumber, "");
-        }
-    }
-    var _c0$1 = function (a0) { return { "hidden": a0 }; };
-    var _c1 = function (a0) { return { "invalid-input": a0 }; };
-    var _c2 = function (a0, a1) { return { "invalid-input": a0, "hidden": a1 }; };
     var RegisterComponent = /** @class */ (function () {
         function RegisterComponent(router, vipService) {
             this.router = router;
@@ -1431,105 +1085,17 @@
         };
         return RegisterComponent;
     }());
-    RegisterComponent.ɵfac = function RegisterComponent_Factory(t) { return new (t || RegisterComponent)(i0.ɵɵdirectiveInject(i1$1.Router), i0.ɵɵdirectiveInject(VipService)); };
-    RegisterComponent.ɵcmp = i0.ɵɵdefineComponent({ type: RegisterComponent, selectors: [["lib-register"]], decls: 35, vars: 32, consts: [[1, "mat-elevation-z2", "form-container"], [4, "ngIf"], [3, "ngClass"], [1, "invalid-input-message"], ["autocomplete", "off", 3, "submit"], ["href", "https://vip.symantec.com/", "target", "_blank", "rel", "external nofollow noopener"], ["matInput", "", "name", "credentialId", "type", "text", "required", "", "placeholder", "Enter VIP Credential ID", "id", "0", 3, "value", "ngClass", "change"], ["credentialId", ""], ["matInput", "", "required", "", "type", "text", "placeholder", "FIRST SECURITY CODE", "id", "1", 3, "value", "ngClass", "change"], ["otp1", ""], ["matInput", "", "required", "", "type", "text", "placeholder", "SECOND SECURITY CODE", "id", "2", 3, "value", "ngClass", "change"], ["otp2", ""], ["matInput", "", "required", "", "type", "text", "placeholder", "SMS CODE", "id", "3", 3, "value", "ngClass", "change"], ["tempOtp", ""], ["mat-button", "", "mat-raised-button", "", "color", "primary", "id", "submit", "type", "submit", 3, "ngClass"], ["selectable", "false"]], template: function RegisterComponent_Template(rf, ctx) {
-            if (rf & 1) {
-                var _r7_1 = i0.ɵɵgetCurrentView();
-                i0.ɵɵelementStart(0, "section", 0);
-                i0.ɵɵtemplate(1, RegisterComponent_h3_1_Template, 4, 0, "h3", 1);
-                i0.ɵɵelementStart(2, "div", 2);
-                i0.ɵɵelementStart(3, "p", 3);
-                i0.ɵɵtext(4);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(5, "form", 4);
-                i0.ɵɵlistener("submit", function RegisterComponent_Template_form_submit_5_listener() { i0.ɵɵrestoreView(_r7_1); var _r1 = i0.ɵɵreference(12); var _r2 = i0.ɵɵreference(20); var _r3 = i0.ɵɵreference(23); var _r6 = i0.ɵɵreference(28); return ctx.onSubmit(_r1.value, _r2.value, _r3.value, _r6.value); });
-                i0.ɵɵelementStart(6, "p");
-                i0.ɵɵtext(7, "Download Symantec VIP Access for desktop or mobile ");
-                i0.ɵɵelementStart(8, "a", 5);
-                i0.ɵɵtext(9, "here.");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(10, "mat-form-field");
-                i0.ɵɵelementStart(11, "input", 6, 7);
-                i0.ɵɵlistener("change", function RegisterComponent_Template_input_change_11_listener() { i0.ɵɵrestoreView(_r7_1); var _r1 = i0.ɵɵreference(12); return ctx.validateInput(_r1); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(13, "p");
-                i0.ɵɵtext(14, "Please enter two ");
-                i0.ɵɵelementStart(15, "u");
-                i0.ɵɵtext(16, "sequential");
-                i0.ɵɵelementEnd();
-                i0.ɵɵtext(17, " security codes");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(18, "mat-form-field");
-                i0.ɵɵelementStart(19, "input", 8, 9);
-                i0.ɵɵlistener("change", function RegisterComponent_Template_input_change_19_listener() { i0.ɵɵrestoreView(_r7_1); var _r2 = i0.ɵɵreference(20); return ctx.validateInput(_r2); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(21, "mat-form-field");
-                i0.ɵɵelementStart(22, "input", 10, 11);
-                i0.ɵɵlistener("change", function RegisterComponent_Template_input_change_22_listener() { i0.ɵɵrestoreView(_r7_1); var _r3 = i0.ɵɵreference(23); return ctx.validateInput(_r3); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵtemplate(24, RegisterComponent_div_24_Template, 6, 0, "div", 1);
-                i0.ɵɵtemplate(25, RegisterComponent_p_25_Template, 2, 1, "p", 1);
-                i0.ɵɵelementStart(26, "mat-form-field");
-                i0.ɵɵelementStart(27, "input", 12, 13);
-                i0.ɵɵlistener("change", function RegisterComponent_Template_input_change_27_listener() { i0.ɵɵrestoreView(_r7_1); var _r6 = i0.ɵɵreference(28); return ctx.validateInput(_r6); });
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(29, "button", 14);
-                i0.ɵɵtext(30);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementStart(31, "div", 2);
-                i0.ɵɵelementStart(32, "h3");
-                i0.ɵɵtext(33);
-                i0.ɵɵelementEnd();
-                i0.ɵɵelement(34, "lib-tick");
-                i0.ɵɵelementEnd();
-                i0.ɵɵelementEnd();
-            }
-            if (rf & 2) {
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.failed);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(17, _c0$1, ctx.registered));
-                i0.ɵɵadvance(2);
-                i0.ɵɵtextInterpolate(ctx.invalidInputMessage);
-                i0.ɵɵadvance(7);
-                i0.ɵɵproperty("value", ctx.credentialIdValue)("ngClass", i0.ɵɵpureFunction1(19, _c1, !ctx.validInputs[0]));
-                i0.ɵɵadvance(8);
-                i0.ɵɵproperty("value", ctx.otp1Value)("ngClass", i0.ɵɵpureFunction1(21, _c1, !ctx.validInputs[1]));
-                i0.ɵɵadvance(3);
-                i0.ɵɵproperty("value", ctx.otp2Value)("ngClass", i0.ɵɵpureFunction1(23, _c1, !ctx.validInputs[2]));
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngIf", !ctx.smsCodeSent);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngIf", ctx.smsCodeSent);
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("value", ctx.tempOtpValue)("ngClass", i0.ɵɵpureFunction2(25, _c2, !ctx.validInputs[3], !ctx.smsCodeSent));
-                i0.ɵɵadvance(2);
-                i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(28, _c0$1, !ctx.smsCodeSent));
-                i0.ɵɵadvance(1);
-                i0.ɵɵtextInterpolate(ctx.submitButtonText);
-                i0.ɵɵadvance(1);
-                i0.ɵɵproperty("ngClass", i0.ɵɵpureFunction1(30, _c0$1, !ctx.registered));
-                i0.ɵɵadvance(2);
-                i0.ɵɵtextInterpolate(ctx.statusMessage);
-            }
-        }, directives: [i3$1.NgIf, i3$1.NgClass, i3.MatFormField, i4.MatInput, i5.MatButton, TickComponent, i8.MatChipList, i8.MatChip], styles: ["form[_ngcontent-%COMP%]{display:flex;flex-direction:column}", ".form-container[_ngcontent-%COMP%]{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"] });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(RegisterComponent, [{
-                type: i0.Component,
-                args: [{
-                        selector: 'lib-register',
-                        templateUrl: './register.component.html',
-                        styleUrls: ['./register.component.scss', '../../main.css']
-                    }]
-            }], function () { return [{ type: i1$1.Router }, { type: VipService }]; }, null);
-    })();
+    RegisterComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-register',
+                    template: "<section class=\"mat-elevation-z2 form-container\">\r\n  <h3 *ngIf=\"failed\">Failed Registration.<br>We have sent you a new SMS code. Please try again.</h3>\r\n\r\n  <div [ngClass]=\"{ 'hidden' : registered }\">\r\n    <p class=\"invalid-input-message\">{{invalidInputMessage}}</p>\r\n\r\n    <form autocomplete=\"off\" (submit)=\"onSubmit(credentialId.value, otp1.value, otp2.value, tempOtp.value)\">\r\n      <p>Download Symantec VIP Access for desktop or mobile\r\n        <a href=\"https://vip.symantec.com/\" target=\"_blank\" rel=\"external nofollow noopener\">here.</a>\r\n      </p>\r\n\r\n      <mat-form-field>\r\n        <input #credentialId matInput [value]=\"credentialIdValue\" name=\"credentialId\" type=\"text\" required\r\n          placeholder=\"Enter VIP Credential ID\" [ngClass]=\"{ 'invalid-input' : !validInputs[0] }\" id=\"0\"\r\n          (change)=\"validateInput(credentialId)\">\r\n      </mat-form-field>\r\n\r\n      <p>Please enter two <u>sequential</u> security codes</p>\r\n      <mat-form-field>\r\n        <input #otp1 matInput required [value]=\"otp1Value\" type=\"text\" placeholder=\"FIRST SECURITY CODE\"\r\n          [ngClass]=\"{ 'invalid-input' : !validInputs[1] }\" id=\"1\" (change)=\"validateInput(otp1)\">\r\n      </mat-form-field>\r\n\r\n      <mat-form-field>\r\n        <input #otp2 matInput required [value]=\"otp2Value\" type=\"text\" placeholder=\"SECOND SECURITY CODE\"\r\n          [ngClass]=\"{ 'invalid-input' : !validInputs[2] }\" id=\"2\" (change)=\"validateInput(otp2)\">\r\n      </mat-form-field>\r\n\r\n      <div *ngIf=\"!smsCodeSent\">\r\n        <p>Sending SMS code to your mobile device...</p>\r\n        <mat-chip-list>\r\n          <mat-chip selectable=false>Waiting for SMS code...</mat-chip>\r\n        </mat-chip-list>\r\n      </div>\r\n\r\n      <p *ngIf=\"smsCodeSent\">SMS Code has been sent to +{{mobileNumber}}</p>\r\n      <mat-form-field>\r\n        <input #tempOtp matInput required [value]=\"tempOtpValue\" type=\"text\" placeholder=\"SMS CODE\"\r\n          [ngClass]=\"{ 'invalid-input' : !validInputs[3], 'hidden' : !smsCodeSent }\" id=\"3\"\r\n          (change)=\"validateInput(tempOtp)\">\r\n      </mat-form-field>\r\n\r\n      <button mat-button mat-raised-button color=\"primary\" id=\"submit\" type=\"submit\"\r\n        [ngClass]=\"{ 'hidden' : !smsCodeSent }\">{{submitButtonText}}</button>\r\n    </form>\r\n  </div>\r\n\r\n  <div [ngClass]=\"{ 'hidden' : !registered }\">\r\n    <h3>{{statusMessage}}</h3>\r\n    <lib-tick></lib-tick>\r\n  </div>\r\n</section>\r\n",
+                    styles: ["form{display:flex;flex-direction:column}", ".form-container{background-color:#fff;font-weight:700;margin-bottom:12px;margin-left:5px;margin-top:12px;padding:15px}"]
+                },] }
+    ];
+    RegisterComponent.ctorParameters = function () { return [
+        { type: i3.Router },
+        { type: VipService }
+    ]; };
 
     var AuthenticationInterceptorService = /** @class */ (function () {
         function AuthenticationInterceptorService(aadService, storageService, router, http, iaDfpService, nswhpAuthService) {
@@ -1697,7 +1263,7 @@
             console.debug('User required to step up authentication: ');
             // We can assume that if we are requesting a VIP token we already have a valid AAD Token
             var authorization = this.aadService.retrieveAadToken();
-            var newHeaders = new i1$2.HttpHeaders().set(this.AAD_TOKEN_HEADER, authorization);
+            var newHeaders = new i4.HttpHeaders().set(this.AAD_TOKEN_HEADER, authorization);
             var options = {
                 headers: newHeaders,
                 observe: 'response'
@@ -1878,16 +1444,61 @@
         };
         return AuthenticationInterceptorService;
     }());
-    AuthenticationInterceptorService.ɵfac = function AuthenticationInterceptorService_Factory(t) { return new (t || AuthenticationInterceptorService)(i0.ɵɵinject(AadService), i0.ɵɵinject(StorageService), i0.ɵɵinject(i1$1.Router), i0.ɵɵinject(i1$2.HttpClient), i0.ɵɵinject(IaDfpService), i0.ɵɵinject(NswhpAuthService)); };
-    AuthenticationInterceptorService.ɵprov = i0.ɵɵdefineInjectable({ token: AuthenticationInterceptorService, factory: AuthenticationInterceptorService.ɵfac, providedIn: 'root' });
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(AuthenticationInterceptorService, [{
-                type: i0.Injectable,
-                args: [{
-                        providedIn: 'root'
-                    }]
-            }], function () { return [{ type: AadService }, { type: StorageService }, { type: i1$1.Router }, { type: i1$2.HttpClient }, { type: IaDfpService }, { type: NswhpAuthService }]; }, null);
-    })();
+    AuthenticationInterceptorService.ɵprov = i0.ɵɵdefineInjectable({ factory: function AuthenticationInterceptorService_Factory() { return new AuthenticationInterceptorService(i0.ɵɵinject(AadService), i0.ɵɵinject(StorageService), i0.ɵɵinject(i3.Router), i0.ɵɵinject(i4.HttpClient), i0.ɵɵinject(IaDfpService), i0.ɵɵinject(NswhpAuthService)); }, token: AuthenticationInterceptorService, providedIn: "root" });
+    AuthenticationInterceptorService.decorators = [
+        { type: i0.Injectable, args: [{
+                    providedIn: 'root'
+                },] }
+    ];
+    AuthenticationInterceptorService.ctorParameters = function () { return [
+        { type: AadService },
+        { type: StorageService },
+        { type: i3.Router },
+        { type: i4.HttpClient },
+        { type: IaDfpService },
+        { type: NswhpAuthService }
+    ]; };
+
+    var SpinnerComponent = /** @class */ (function () {
+        function SpinnerComponent() {
+            this.isDelayedRunning = false;
+        }
+        Object.defineProperty(SpinnerComponent.prototype, "isRunning", {
+            set: function (value) {
+                this.isDelayedRunning = value;
+            },
+            enumerable: false,
+            configurable: true
+        });
+        return SpinnerComponent;
+    }());
+    SpinnerComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-spinner',
+                    template: "<div [hidden]=\"!isDelayedRunning\" class=\"spinner\">\r\n  <div class=\"double-bounce1\"></div>\r\n  <div class=\"double-bounce2\"></div>\r\n</div>\r\n",
+                    styles: [".spinner{height:250px;margin:50px auto;position:relative;width:250px}.double-bounce1,.double-bounce2{animation:sk-bounce 2s ease-in-out infinite;background-color:rgba(155,255,177,.5);border-radius:50%;height:100%;left:0;opacity:.6;position:absolute;top:0;width:100%}.double-bounce2{animation-delay:-1s}@keyframes sk-bounce{0%,to{-webkit-transform:scale(0);transform:scale(0)}50%{-webkit-transform:scale(1);transform:scale(1)}}"]
+                },] }
+    ];
+    SpinnerComponent.ctorParameters = function () { return []; };
+    SpinnerComponent.propDecorators = {
+        isRunning: [{ type: i0.Input }]
+    };
+
+    var TickComponent = /** @class */ (function () {
+        function TickComponent() {
+        }
+        TickComponent.prototype.ngOnInit = function () {
+        };
+        return TickComponent;
+    }());
+    TickComponent.decorators = [
+        { type: i0.Component, args: [{
+                    selector: 'lib-tick',
+                    template: "<div class=\"checkmark\">\r\n  <svg version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\"\r\n    y=\"0px\" viewBox=\"0 0 161.2 161.2\" enable-background=\"new 0 0 161.2 161.2\" xml:space=\"preserve\">\r\n    <path class=\"path\" fill=\"none\" stroke=\"#7DB0D5\" stroke-miterlimit=\"10\" d=\"M425.9,52.1L425.9,52.1c-2.2-2.6-6-2.6-8.3-0.1l-42.7,46.2l-14.3-16.4\r\n\tc-2.3-2.7-6.2-2.7-8.6-0.1c-1.9,2.1-2,5.6-0.1,7.7l17.6,20.3c0.2,0.3,0.4,0.6,0.6,0.9c1.8,2,4.4,2.5,6.6,1.4c0.7-0.3,1.4-0.8,2-1.5\r\n\tc0.3-0.3,0.5-0.6,0.7-0.9l46.3-50.1C427.7,57.5,427.7,54.2,425.9,52.1z\" />\r\n    <circle class=\"path\" fill=\"none\" stroke=\"rgba(155, 255, 177, 1)\" stroke-width=\"4\" stroke-miterlimit=\"10\" cx=\"80.6\"\r\n      cy=\"80.6\" r=\"62.1\" />\r\n    <polyline class=\"path\" fill=\"none\" stroke=\"rgba(155, 255, 177, 1)\" stroke-width=\"6\" stroke-linecap=\"round\"\r\n      stroke-miterlimit=\"10\" points=\"113,52.8\r\n\t74.1,108.4 48.2,86.4 \" />\r\n\r\n    <circle class=\"spin\" fill=\"none\" stroke=\"rgba(155, 255, 177, 1)\" stroke-width=\"4\" stroke-miterlimit=\"10\"\r\n      stroke-dasharray=\"12.2175,12.2175\" cx=\"80.6\" cy=\"80.6\" r=\"73.9\" />\r\n\r\n  </svg>\r\n",
+                    styles: [".checkmark{margin:0 auto;padding-top:40px;width:200px}.path{-webkit-animation:dash 2s ease-in-out;animation:dash 2s ease-in-out;stroke-dasharray:1000;stroke-dashoffset:0}.spin{-webkit-animation:spin 2s;-webkit-transform-origin:50% 50%;animation:spin 2s;transform-origin:50% 50%}@keyframes dash{0%{stroke-dashoffset:1000}to{stroke-dashoffset:0}}@keyframes spin{0%{-webkit-transform:rotate(0deg)}to{-webkit-transform:rotate(1turn)}}@keyframes text{0%{opacity:0}to{opacity:1}}"]
+                },] }
+    ];
+    TickComponent.ctorParameters = function () { return []; };
 
     var NswhpAuthModule = /** @class */ (function () {
         function NswhpAuthModule() {
@@ -1902,95 +1513,57 @@
         };
         return NswhpAuthModule;
     }());
-    NswhpAuthModule.ɵmod = i0.ɵɵdefineNgModule({ type: NswhpAuthModule });
-    NswhpAuthModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NswhpAuthModule_Factory(t) { return new (t || NswhpAuthModule)(); }, providers: [
-            StorageService,
-            IaDfpService,
-            NswhpAuthMaterialModule,
-            {
-                provide: i1$2.HTTP_INTERCEPTORS,
-                useClass: AuthenticationInterceptorService,
-                multi: true
-            },
-            AadService,
-            VipService,
-            i1.AdalService
-        ], imports: [[
-                i3$1.CommonModule,
-                NswhpAuthMaterialModule,
-            ]] });
-    (function () {
-        (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NswhpAuthModule, { declarations: [AzureLoginComponent,
-                AzureLogoutComponent,
-                OtpComponent,
-                PushComponent,
-                RegisterComponent,
-                SpinnerComponent,
-                TickComponent,
-                ContactAdminComponent], imports: [i3$1.CommonModule,
-                NswhpAuthMaterialModule], exports: [AzureLoginComponent,
-                AzureLogoutComponent,
-                OtpComponent,
-                PushComponent,
-                RegisterComponent,
-                SpinnerComponent,
-                TickComponent,
-                ContactAdminComponent] });
-    })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NswhpAuthModule, [{
-                type: i0.NgModule,
-                args: [{
-                        declarations: [
-                            AzureLoginComponent,
-                            AzureLogoutComponent,
-                            OtpComponent,
-                            PushComponent,
-                            RegisterComponent,
-                            SpinnerComponent,
-                            TickComponent,
-                            ContactAdminComponent,
-                        ],
-                        exports: [
-                            AzureLoginComponent,
-                            AzureLogoutComponent,
-                            OtpComponent,
-                            PushComponent,
-                            RegisterComponent,
-                            SpinnerComponent,
-                            TickComponent,
-                            ContactAdminComponent,
-                        ],
-                        imports: [
-                            i3$1.CommonModule,
-                            NswhpAuthMaterialModule,
-                        ],
-                        providers: [
-                            StorageService,
-                            IaDfpService,
-                            NswhpAuthMaterialModule,
-                            {
-                                provide: i1$2.HTTP_INTERCEPTORS,
-                                useClass: AuthenticationInterceptorService,
-                                multi: true
-                            },
-                            AadService,
-                            VipService,
-                            i1.AdalService
-                        ],
-                        entryComponents: [
-                            AzureLoginComponent,
-                            AzureLogoutComponent,
-                            OtpComponent,
-                            PushComponent,
-                            RegisterComponent,
-                            SpinnerComponent,
-                            TickComponent,
-                            ContactAdminComponent,
-                        ]
-                    }]
-            }], null, null);
-    })();
+    NswhpAuthModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    declarations: [
+                        AzureLoginComponent,
+                        AzureLogoutComponent,
+                        OtpComponent,
+                        PushComponent,
+                        RegisterComponent,
+                        SpinnerComponent,
+                        TickComponent,
+                        ContactAdminComponent,
+                    ],
+                    exports: [
+                        AzureLoginComponent,
+                        AzureLogoutComponent,
+                        OtpComponent,
+                        PushComponent,
+                        RegisterComponent,
+                        SpinnerComponent,
+                        TickComponent,
+                        ContactAdminComponent,
+                    ],
+                    imports: [
+                        common.CommonModule,
+                        NswhpAuthMaterialModule,
+                    ],
+                    providers: [
+                        StorageService,
+                        IaDfpService,
+                        NswhpAuthMaterialModule,
+                        {
+                            provide: i4.HTTP_INTERCEPTORS,
+                            useClass: AuthenticationInterceptorService,
+                            multi: true
+                        },
+                        AadService,
+                        VipService,
+                        adalAngular4.AdalService
+                    ],
+                    entryComponents: [
+                        AzureLoginComponent,
+                        AzureLogoutComponent,
+                        OtpComponent,
+                        PushComponent,
+                        RegisterComponent,
+                        SpinnerComponent,
+                        TickComponent,
+                        ContactAdminComponent,
+                    ]
+                },] }
+    ];
 
     var routes = [
         { path: 'authentication/otp', component: OtpComponent },
@@ -2001,23 +1574,18 @@
         { path: 'authentication/push', component: PushComponent },
         { path: 'authentication/contact-admin', component: ContactAdminComponent }
     ];
+    var routerModuleForRoot = i3.RouterModule.forRoot(routes);
     var NswhpAuthRoutingModule = /** @class */ (function () {
         function NswhpAuthRoutingModule() {
         }
         return NswhpAuthRoutingModule;
     }());
-    NswhpAuthRoutingModule.ɵmod = i0.ɵɵdefineNgModule({ type: NswhpAuthRoutingModule });
-    NswhpAuthRoutingModule.ɵinj = i0.ɵɵdefineInjector({ factory: function NswhpAuthRoutingModule_Factory(t) { return new (t || NswhpAuthRoutingModule)(); }, imports: [[i1$1.RouterModule.forRoot(routes)], i1$1.RouterModule] });
-    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && i0.ɵɵsetNgModuleScope(NswhpAuthRoutingModule, { imports: [i1$1.RouterModule], exports: [i1$1.RouterModule] }); })();
-    /*@__PURE__*/ (function () {
-        i0.ɵsetClassMetadata(NswhpAuthRoutingModule, [{
-                type: i0.NgModule,
-                args: [{
-                        imports: [i1$1.RouterModule.forRoot(routes)],
-                        exports: [i1$1.RouterModule]
-                    }]
-            }], null, null);
-    })();
+    NswhpAuthRoutingModule.decorators = [
+        { type: i0.NgModule, args: [{
+                    imports: [routerModuleForRoot],
+                    exports: [i3.RouterModule]
+                },] }
+    ];
 
     /*
      * Public API Surface of nswhpauth
@@ -2038,6 +1606,22 @@
     exports.RegisterComponent = RegisterComponent;
     exports.SpinnerComponent = SpinnerComponent;
     exports.TickComponent = TickComponent;
+    exports.routerModuleForRoot = routerModuleForRoot;
+    exports.ɵb = NSWHP_AUTH_CONFIG;
+    exports.ɵc = AzureLoginComponent;
+    exports.ɵd = AadService;
+    exports.ɵe = StorageService;
+    exports.ɵf = AzureLogoutComponent;
+    exports.ɵg = OtpComponent;
+    exports.ɵh = VipService;
+    exports.ɵi = IaDfpService;
+    exports.ɵj = PushComponent;
+    exports.ɵk = RegisterComponent;
+    exports.ɵl = SpinnerComponent;
+    exports.ɵm = TickComponent;
+    exports.ɵn = ContactAdminComponent;
+    exports.ɵo = NswhpAuthMaterialModule;
+    exports.ɵp = AuthenticationInterceptorService;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 

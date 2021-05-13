@@ -7,4 +7,3 @@ export interface IMfaMessageErrorMessage {
     detailMessage: string;
     requestId: string;
 }
-//# sourceMappingURL=mfaErrorMessage.d.ts.map

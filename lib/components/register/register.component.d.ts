@@ -2,7 +2,6 @@ import { OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { IMfaMessage } from '../../model/mfaMessage';
 import { VipService } from '../../services/vip.service';
-import * as i0 from "@angular/core";
 export declare class RegisterComponent implements OnInit {
     private router;
     private vipService;
@@ -30,7 +29,4 @@ export declare class RegisterComponent implements OnInit {
     private handleFailedRegistration;
     validateInput(input: HTMLInputElement): void;
     private allInputsValid;
-    static ɵfac: i0.ɵɵFactoryDef<RegisterComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<RegisterComponent, "lib-register", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=register.component.d.ts.map

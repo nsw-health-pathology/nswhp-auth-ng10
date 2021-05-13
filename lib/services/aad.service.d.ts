@@ -1,7 +1,6 @@
 import { AdalService } from 'adal-angular4';
 import { StorageService } from './storage.service';
 import { NswhpAuthService } from '../nswhpauth.service';
-import * as i0 from "@angular/core";
 export declare class AadService {
     private adalService;
     private storage;
@@ -33,7 +32,4 @@ export declare class AadService {
     loginToAzure(): void;
     logoutOfAzure(): void;
     retrieveAadToken(): string;
-    static ɵfac: i0.ɵɵFactoryDef<AadService, never>;
-    static ɵprov: i0.ɵɵInjectableDef<AadService>;
 }
-//# sourceMappingURL=aad.service.d.ts.map

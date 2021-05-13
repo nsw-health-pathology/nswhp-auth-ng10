@@ -2,7 +2,6 @@ import { OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AadService } from '../../services/aad.service';
 import { StorageService } from '../../services/storage.service';
-import * as i0 from "@angular/core";
 export declare class AzureLoginComponent implements OnInit {
     private aadService;
     private router;
@@ -13,7 +12,4 @@ export declare class AzureLoginComponent implements OnInit {
     private handleLoginRouting;
     ngOnInit(): Promise<void>;
     selectAzureInstance(instance: string): void;
-    static ɵfac: i0.ɵɵFactoryDef<AzureLoginComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDefWithMeta<AzureLoginComponent, "lib-azure-login", never, {}, {}, never, never>;
 }
-//# sourceMappingURL=azure-login.component.d.ts.map

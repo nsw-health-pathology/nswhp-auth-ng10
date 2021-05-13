@@ -13,4 +13,3 @@ export interface IMfaMessage {
     transactionId: string;
     vipToken: string;
 }
-//# sourceMappingURL=mfaMessage.d.ts.map

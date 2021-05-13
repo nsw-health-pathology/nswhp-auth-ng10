@@ -13,4 +13,3 @@ export interface INswhpAuthServiceOptions {
     };
 }
 export declare const NSWHP_AUTH_CONFIG: InjectionToken<INswhpAuthServiceOptions>;
-//# sourceMappingURL=nswhpauth-config.d.ts.map
