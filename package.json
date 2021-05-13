@@ -1,0 +1,30 @@
+{
+  "name": "nswhp-auth-ng10",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "~10.1.6",
+    "@angular/cdk": "10.1.3",
+    "@angular/compiler": "~10.1.6",
+    "@angular/core": "~10.1.6",
+    "@angular/forms": "~10.1.6",
+    "@angular/flex-layout": "10.0.0-beta.32",
+    "@angular/router": "~10.1.6",
+    "adal-angular4": "^4.0.9",
+    "@angular/material": "10.1.3",
+    "jwt-decode": "^2.2.0",
+    "http-status-codes": "^1.3.2"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "main": "bundles/nswhp-auth-ng10.umd.js",
+  "module": "fesm2015/nswhp-auth-ng10.js",
+  "es2015": "fesm2015/nswhp-auth-ng10.js",
+  "esm2015": "esm2015/nswhp-auth-ng10.js",
+  "fesm2015": "fesm2015/nswhp-auth-ng10.js",
+  "typings": "nswhp-auth-ng10.d.ts",
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
+}
