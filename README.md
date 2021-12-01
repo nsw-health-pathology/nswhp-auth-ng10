@@ -1,6 +1,6 @@
 # NSWHP Authentication Module Angular 10
 
-This module when imported provides authentication using the ADAL framework
+This was a proof of concept. Still needs work.
 
 ![Workflow Status](https://img.shields.io/github/workflow/status/nsw-health-pathology/nswhp-auth-ng-10/node-js-build-ci/develop)
 ![Coverage](https://img.shields.io/coveralls/github/nsw-health-pathology/nswhp-auth-ng-10/develop)
